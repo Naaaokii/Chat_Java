@@ -60,7 +60,8 @@ public class App extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         String message = messageField.getText();
         if (!message.equals("")) {
-            chatArea.append("Moi : " + message + "\n"); // Ajoute le message de l'utilisateur à l'historique de la conversation
+            LocalTime time = LocalTime.now();
+            chatArea.append("Moi : " + message + "  " + time.getHour() + ":" + time.getMinute() +  "\n"); // Ajoute le message de l'utilisateur à l'historique de la conversation
             messageField.setText(""); // Efface le champ de texte pour le prochain message
         }
     }
