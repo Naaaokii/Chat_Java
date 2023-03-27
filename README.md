@@ -8,9 +8,9 @@ Talk with your friends on the Chat
 
 
 ## 🙇 Author
-#### Eloi
+#### Elhoi
 - Github: [@Naaaokii](https://github.com/Naaaokii)
-#### Mathéo
+#### Matéo
 - Github: [@matlam27](https://github.com/matlam27)
 #### Jordan4
 - Github: [@Jojo12369](https://github.com/Jojo12369)
