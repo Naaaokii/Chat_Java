@@ -8,6 +8,7 @@ public class App extends JFrame implements ActionListener {
     private JTextField messageField;
     private JTextArea chatArea;
     private JButton sendButton;
+
     
     public App() {
         // Initialisation de la fenêtre principale
@@ -17,6 +18,7 @@ public class App extends JFrame implements ActionListener {
         
         // Création des éléments de l'interface graphique
         messageField = new JTextField();
+        messageField.setBackground(new Color(145, 86, 203));
         chatArea = new JTextArea();
         chatArea.setEditable(false); // Empêche l'utilisateur d'éditer l'historique de la conversation
         sendButton = new JButton("Envoyer");
@@ -36,6 +38,7 @@ public class App extends JFrame implements ActionListener {
         
         // Affichage de la fenêtre principale
         setVisible(true);
+
     }
     
     // Fonction appelée lorsqu'on appuie sur le bouton d'envoi
@@ -51,5 +54,7 @@ public class App extends JFrame implements ActionListener {
         App app = new App() {
             
         };
+        
     }
+
 }
