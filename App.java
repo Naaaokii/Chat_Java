@@ -22,16 +22,18 @@ public class App extends JFrame implements ActionListener {
     
     public App() {
         // Initialisation de la fenêtre principale
-        setTitle("Chat");
+        setTitle("Discord");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(600, 600);
         
         // Création des éléments de l'interface graphique
         messageField = new JTextField();
         messageField.setBackground(new Color(110, 110, 110));
+        messageField.setForeground(Color.WHITE);
         chatArea = new JTextArea();
         chatArea.setEditable(false); // Empêche l'utilisateur d'éditer l'historique de la conversation
         chatArea.setBackground(new Color(44, 47, 51));
+        chatArea.setForeground(Color.WHITE);
         sendButton = new JButton("Envoyer");
         messageField.addKeyListener(new KeyAdapter() {
             public void keyPressed(KeyEvent e) {
