@@ -9,16 +9,6 @@ public class App extends JFrame implements ActionListener {
     private JTextField messageField;
     private JTextArea chatArea;
     private JButton sendButton;
-    private void sendMessage() {
-        String message = messageField.getText();
-        if (!message.equals("")) {
-            // Obtenir l'heure actuelle
-            LocalTime time = LocalTime.now();
-            // Ajouter le message et l'heure à l'historique de conversation
-            chatArea.append("Moi : " + message + "  " + time.getHour() + ":" + time.getMinute() +  "\n");
-            messageField.setText("");
-        }
-    }
     
     public App() {
         // Initialisation de la fenêtre principale
@@ -29,8 +19,11 @@ public class App extends JFrame implements ActionListener {
         // Création des éléments de l'interface graphique
         messageField = new JTextField();
         messageField.setBackground(new Color(145, 86, 203));
+        messageField.setFont(new Font("Courier", Font.BOLD, 15));
+        messageField.setForeground(Color.WHITE);
         chatArea = new JTextArea();
         chatArea.setEditable(false); // Empêche l'utilisateur d'éditer l'historique de la conversation
+        chatArea.setFont(new Font("Courier", Font.BOLD, 15));
         sendButton = new JButton("Envoyer");
         messageField.addKeyListener(new KeyAdapter() {
             public void keyPressed(KeyEvent e) {
@@ -65,6 +58,16 @@ public class App extends JFrame implements ActionListener {
             LocalTime time = LocalTime.now();
             chatArea.append("Moi : " + message + "  " + time.getHour() + ":" + time.getMinute() +  "\n"); // Ajoute le message de l'utilisateur à l'historique de la conversation
             messageField.setText(""); // Efface le champ de texte pour le prochain message
+        }
+    }
+    private void sendMessage() {
+        String message = messageField.getText();
+        if (!message.equals("")) {
+            // Obtenir l'heure actuelle
+            LocalTime time = LocalTime.now();
+            // Ajouter le message et l'heure à l'historique de conversation
+            chatArea.append("Moi : " + message + "  " + time.getHour() + ":" + time.getMinute() +  "\n");
+            messageField.setText("");
         }
     }
     
