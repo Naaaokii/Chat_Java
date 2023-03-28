@@ -24,6 +24,7 @@ public class App extends JFrame implements ActionListener {
         // Création des éléments de l'interface graphique
         messageField = new JTextField();
         chatArea = new JTextArea();
+        chatArea.setLineWrap(true);
         chatArea.setEditable(false); // Empêche l'utilisateur d'éditer l'historique de la conversation
         sendButton = new JButton("Envoyer");
         fontLabel = new JLabel("Taille de police : ");
@@ -77,5 +78,9 @@ public class App extends JFrame implements ActionListener {
             chatArea.append("Moi : " + message + "\n"); // Ajoute le message de l'utilisateur à l'historique de la conversation
             messageField.setText(""); // Efface le champ de texte pour le prochain message
         }
+    }
+
+    public static void main(String[] args) {
+        App app = new App();
     }
 }
