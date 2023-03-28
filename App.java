@@ -7,6 +7,7 @@ public class App extends JFrame implements ActionListener {
     
     // Les éléments de l'interface graphique
     private JTextField messageField;
+    private JTextField username;
     private JTextArea chatArea;
     private JButton sendButton;
     
@@ -17,13 +18,17 @@ public class App extends JFrame implements ActionListener {
         setSize(600, 600);
         
         // Création des éléments de l'interface graphique
+        username = new JTextField();
+        
         messageField = new JTextField();
-        messageField.setBackground(new Color(145, 86, 203));
+        messageField.setBackground(Color.BLACK);
         messageField.setFont(new Font("Courier", Font.BOLD, 15));
-        messageField.setForeground(Color.WHITE);
+        messageField.setForeground(Color.GREEN);
         chatArea = new JTextArea();
         chatArea.setEditable(false); // Empêche l'utilisateur d'éditer l'historique de la conversation
         chatArea.setFont(new Font("Courier", Font.BOLD, 15));
+        chatArea.setBackground(Color.BLACK);
+        chatArea.setForeground(Color.GREEN);
         sendButton = new JButton("Envoyer");
         messageField.addKeyListener(new KeyAdapter() {
             public void keyPressed(KeyEvent e) {
