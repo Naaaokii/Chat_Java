@@ -28,9 +28,10 @@ public class App extends JFrame implements ActionListener {
         
         // Création des éléments de l'interface graphique
         messageField = new JTextField();
-        messageField.setBackground(new Color(145, 86, 203));
+        messageField.setBackground(new Color(110, 110, 110));
         chatArea = new JTextArea();
         chatArea.setEditable(false); // Empêche l'utilisateur d'éditer l'historique de la conversation
+        chatArea.setBackground(new Color(44, 47, 51));
         sendButton = new JButton("Envoyer");
         messageField.addKeyListener(new KeyAdapter() {
             public void keyPressed(KeyEvent e) {
