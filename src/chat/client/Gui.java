@@ -8,6 +8,8 @@ package chat.client;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.IOException;
+import java.time.LocalTime;
+
 import javax.swing.*;
 
 /**
@@ -82,7 +84,7 @@ public class Gui extends JFrame {
      * La methode requestPseud. Cette methode permet de saisir l'adresse ip du serveur et le pseudo
      * après avoir saisi ces informations, le titre de la fenetre est changée avec le pseudo
      * le client est initialisé si l'adresse est bonne sinon le une boite de dialogue est ouverte , affiche un message et arrete le programme.
-     * @author MTiméo, Jordan, Mattéo et Eloi
+     * @author Timéo, Jordan, Mattéo et Eloi
      */
 
     public void requestPseudo() {
@@ -142,8 +144,9 @@ public class Gui extends JFrame {
      * @param text : message à afficher
      */
     public void ajouterMessage(String text){
+        LocalTime time = LocalTime.now();
         if(text.compareTo("")!=0){
-            this.txtOutput.append(text+"\n");
+            this.txtOutput.append(time.getHour()+ ":" + time.getMinute()+ "  " +text+"\n");
         }
     }
    
