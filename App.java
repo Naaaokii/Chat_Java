@@ -4,6 +4,8 @@ import java.awt.event.*;
 import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.Date;
+import java.text.SimpleDateFormat;
 
 public class App extends JFrame implements ActionListener {
 
@@ -81,12 +83,18 @@ public class App extends JFrame implements ActionListener {
     // Fonction appelée lorsqu'on appuie sur le bouton d'envoi
     public void actionPerformed(ActionEvent e) {
         String message = messageField.getText();
+        // Obtenir l'heure actuelle
+        Date date = new Date();
+        // Créer un objet SimpleDateFormat pour formater l'heure
+        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+        // Formater l'heure en chaîne de caractères
+        String time = sdf.format(date);
         int size = Integer.parseInt(fontField.getText()); // Récupère la taille de police saisie
         Font font = new Font((String) fontComboBox.getSelectedItem(), Font.PLAIN, size); // Crée une nouvelle police avec la taille saisie et la police sélectionnée dans le menu déroulant
         messageField.setFont(font);
         chatArea.setFont(font);
         if (!message.equals("")) {
-            chatArea.append("Moi : " + message + "\n"); // Ajoute le message de l'utilisateur à l'historique de la conversation
+            chatArea.append("Moi : " + message + " " + time + "\n"); // Ajoute le message de l'utilisateur à l'historique de la conversation
             messageField.setText(""); // Efface le champ de texte pour le prochain message
         }
     }
