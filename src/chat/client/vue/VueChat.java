@@ -117,9 +117,4 @@ public class VueChat extends JFrame{
 	public static void main(String [] a){
 		new VueChat("room test");
 	}
-
-
-	
-	
-	
 }

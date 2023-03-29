@@ -72,6 +72,4 @@ public class SocketClient {
 		msgrecu.close();
 		socket.close();
 	}
-	
-
 }
