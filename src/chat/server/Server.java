@@ -99,7 +99,7 @@ public class Server {
 	}*/
 	/**
 	 * Class proccessus client
-	 * @author Eloi
+	 * @author Timéo, Jordan, Mattéo et Eloi
 	 *
 	 */
 	
