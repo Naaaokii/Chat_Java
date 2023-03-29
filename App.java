@@ -31,7 +31,7 @@ public class App extends JFrame implements ActionListener {
         messageField.setBackground(new Color(110, 110, 110));
         messageField.setForeground(Color.WHITE);
         chatArea = new JTextArea();
-        chatArea.setEditable(false); // Empêche l'utilisateur d'éditer l'historique de la conversation
+        chatArea.setEditable(false); // Empêche l'utilisateur d'éditer l'historique
         chatArea.setBackground(new Color(44, 47, 51));
         chatArea.setForeground(Color.WHITE);
         sendButton = new JButton("Envoyer");
