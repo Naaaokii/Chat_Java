@@ -48,7 +48,9 @@ public class App extends JFrame implements ActionListener {
         // Ajout des éléments à la fenêtre principale
         Container container = getContentPane();
         container.setLayout(new BorderLayout());
-        container.add(chatArea, BorderLayout.CENTER);
+        JScrollPane scrollPane = new JScrollPane(chatArea);
+        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+        container.add(scrollPane, BorderLayout.CENTER);
 
         JPanel bottomPanel = new JPanel(new BorderLayout());
         JPanel fontPanel = new JPanel(new FlowLayout()); // Panel pour contenir le label, le champ de texte pour la taille de police et le menu déroulant pour la police
@@ -62,6 +64,15 @@ public class App extends JFrame implements ActionListener {
 
         // Ajout de l'action sur le bouton d'envoi
         sendButton.addActionListener(this);
+
+        // Ajout du KeyListener au champ de texte "messageField"
+        messageField.addKeyListener(new KeyAdapter() {
+            public void keyPressed(KeyEvent e) {
+                if (e.getKeyCode()==KeyEvent.VK_ENTER) {
+                    actionPerformed(new ActionEvent(sendButton, ActionEvent.ACTION_PERFORMED, null));
+                }
+            }
+        });
 
         // Affichage de la fenêtre principale
         setVisible(true);
@@ -79,7 +90,6 @@ public class App extends JFrame implements ActionListener {
             messageField.setText(""); // Efface le champ de texte pour le prochain message
         }
     }
-
     public static void main(String[] args) {
         App app = new App();
     }
