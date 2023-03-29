@@ -128,14 +128,12 @@ public class Gui extends JFrame {
     
     public void btnSend_actionPerformed(ActionEvent e) {
     	String msg=this.txtMessage.getText();
-    	if(msg!=null){
+    	if(msg.compareTo("")!=0){
     		this.user.sendMessage(this.pseudo," \u2192 "+msg);
     		this.ajouterMessage(msg);
     		this.txtMessage.setText("");
     		this.txtMessage.requestFocus();
     	}
-    	else
-    		System.exit(0);
     }
     
     /**
@@ -144,7 +142,9 @@ public class Gui extends JFrame {
      * @param text : message à afficher
      */
     public void ajouterMessage(String text){
-    	this.txtOutput.append(text+"\n");
+        if(text.compareTo("")!=0){
+            this.txtOutput.append(text+"\n");
+        }
     }
    
     
