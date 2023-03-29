@@ -57,6 +57,8 @@ public class Server {
 			}
 		}
 	}
+
+	// Pas sûr d'utiliser
 	
 	/**
 	 * cette methode permet d'enregistrer un client dans un fichier BdUser.txt
