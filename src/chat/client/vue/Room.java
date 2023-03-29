@@ -22,9 +22,4 @@ public class Room extends JTextArea {
 	public void setNom(String nom) {
 		this.nom = nom;
 	}
-	
-	
-	
-	
-
 }
