@@ -6,7 +6,7 @@ package chat.server;
 /**
  * @author Eloi
  * @version 2.0
- * @since 16/02/2016
+ * @since 26/09/2012
  */
 import java.net.*;
 import java.io.*;
