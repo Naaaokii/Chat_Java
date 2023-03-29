@@ -12,7 +12,7 @@ import javax.swing.*;
 
 /**
  * 
- * @author Eloi
+ * @author Timéo, Jordan, Mattéo et Eloi
  * @version 2.0
  */
 
@@ -28,7 +28,7 @@ public class Gui extends JFrame {
     private JButton btnSend = new JButton("Envoyer");
     /**
      * Constructeur par defaut. Ce constructeur permet de creer l'interface et le dialog pour le pseudo
-     * @author Mr Fall
+     * @author Timéo, Jordan, Mattéo et Eloi
      */
     public Gui() {
     	//this.setUser(user);
@@ -40,7 +40,7 @@ public class Gui extends JFrame {
     /**
      * Methode IHM, cette methode permet de creer l'interface graphique 
      * et d'ajouter les ecouteurs sur la fenetre, sur le champ de text et sur le bouton envoyer
-     * @author Mr Fall
+     * @author Timéo, Jordan, Mattéo et Eloi
      */
     public void createIHM() {
     	this.setAlwaysOnTop(true);
@@ -82,7 +82,7 @@ public class Gui extends JFrame {
      * La methode requestPseud. Cette methode permet de saisir l'adresse ip du serveur et le pseudo
      * après avoir saisi ces informations, le titre de la fenetre est changée avec le pseudo
      * le client est initialisé si l'adresse est bonne sinon le une boite de dialogue est ouverte , affiche un message et arrete le programme.
-     * @author Mr Fall, (modifier)
+     * @author MTiméo, Jordan, Mattéo et Eloi
      */
 
     public void requestPseudo() {

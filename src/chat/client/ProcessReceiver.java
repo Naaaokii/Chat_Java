@@ -6,7 +6,7 @@ package chat.client;
 import java.io.IOException;
 
 /**
- * @author ELoi
+ * @author Timéo, Jordan, Mattéo et Eloi
  * @version 2.0
  */
 

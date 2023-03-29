@@ -4,7 +4,7 @@
 package chat.server;
 
 /**
- * @author Eloi
+ * @author Timéo, Jordan, Mattéo et Eloi
  * @version 2.0
  * @since 26/09/2012
  */
@@ -50,7 +50,7 @@ public class Server {
 				client=serveur.accept();
 				//saveclient(client);
 				this.clients.add(client);
-				System.out.println("le client "+client.getInetAddress()+" vient de se connecter au serveur");
+				System.out.println("\u001B[32m le client "+client.getInetAddress()+" vient de se connecter au serveur");
 				new ProcessClient(client).start();
 			} catch (IOException e) {
 				e.printStackTrace();
@@ -59,7 +59,7 @@ public class Server {
 	}
 	
 	/**
-	 * cette methode permet d'enrégistrer un client dans un fichier BdUser.txt
+	 * cette methode permet d'enregistrer un client dans un fichier BdUser.txt
 	 * @param client
 	 * @throws IOException
 	 */
@@ -99,7 +99,7 @@ public class Server {
 	}*/
 	/**
 	 * Class proccessus client
-	 * @author Eloi
+	 * @author Timéo, Jordan, Mattéo et Eloi
 	 *
 	 */
 	
@@ -142,6 +142,7 @@ public class Server {
 				
 			}
 			this.sendMessageToClients("un client vient de se déconnecter");
+			System.out.println("\u001B[31m le client "+client.getInetAddress()+" vient de se déconnecter du serveur");
 			clients.delete(client);
 			
 			try {
