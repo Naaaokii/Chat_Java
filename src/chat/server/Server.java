@@ -50,7 +50,7 @@ public class Server {
 				client=serveur.accept();
 				//saveclient(client);
 				this.clients.add(client);
-				System.out.println("le client "+client.getInetAddress()+" vient de se connecter au serveur");
+				System.out.println("\u001B[32m le client "+client.getInetAddress()+" vient de se connecter au serveur");
 				new ProcessClient(client).start();
 			} catch (IOException e) {
 				e.printStackTrace();
@@ -142,6 +142,7 @@ public class Server {
 				
 			}
 			this.sendMessageToClients("un client vient de se déconnecter");
+			System.out.println("\u001B[31m le client "+client.getInetAddress()+" vient de se déconnecter du serveur");
 			clients.delete(client);
 			
 			try {
