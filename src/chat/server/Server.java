@@ -176,10 +176,16 @@ public class Server {
 		}
 		
 	}
+
+	public static void clearScreen() {  
+		System.out.print("\033[H\033[2J");  
+		System.out.flush();  
+	}
 	
 	
 	public static void main(String[] args) {
 		try {
+			clearScreen();
 			new Server();
 		} catch (IOException e) {
 			System.out.println("Erreur de demarrage du serveur");
