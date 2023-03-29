@@ -4,7 +4,7 @@
 package chat.server;
 
 /**
- * @author Eloi
+ * @author Timéo, Jordan, Mattéo et Eloi
  * @version 2.0
  */
 import java.net.*;

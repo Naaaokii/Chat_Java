@@ -7,7 +7,7 @@ import java.io.*;
 import java.net.*;
 /**
  * 
- * @author Eloi
+ * @author Timéo, Jordan, Mattéo et Eloi
  * @version 2.0
  * @since 12/11/1955
  */

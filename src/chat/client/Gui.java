@@ -12,7 +12,7 @@ import javax.swing.*;
 
 /**
  * 
- * @author Eloi
+ * @author Timéo, Jordan, Mattéo et Eloi
  * @version 2.0
  */
 

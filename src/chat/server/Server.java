@@ -4,7 +4,7 @@
 package chat.server;
 
 /**
- * @author Eloi
+ * @author Timéo, Jordan, Mattéo et Eloi
  * @version 2.0
  * @since 26/09/2012
  */
@@ -59,7 +59,7 @@ public class Server {
 	}
 	
 	/**
-	 * cette methode permet d'enrégistrer un client dans un fichier BdUser.txt
+	 * cette methode permet d'enregistrer un client dans un fichier BdUser.txt
 	 * @param client
 	 * @throws IOException
 	 */
