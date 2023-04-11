@@ -8,6 +8,8 @@ package chat.client;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.IOException;
+import java.time.LocalTime;
+
 import javax.swing.*;
 
 /**
@@ -142,8 +144,9 @@ public class Gui extends JFrame {
      * @param text : message à afficher
      */
     public void ajouterMessage(String text){
+        LocalTime time = LocalTime.now();
         if(text.compareTo("")!=0){
-            this.txtOutput.append(text+"\n");
+            this.txtOutput.append(time.getHour()+ ":" + time.getMinute()+ "  " +text+"\n");
         }
     }
    
