@@ -132,7 +132,7 @@ public class Server {
 		public void run(){
 			//this.clientsconnectes=clients.getClientsEnLigne(this.client);
 			String msg="ifall";
-			this.sendMessageToClients("un client vient de se connecter");
+			this.sendMessageToClients("un nouvel utilisateur vient de se connecter");
 			while(!msg.toUpperCase().equals("FIN")){
 				try {
 					in = new BufferedReader(new InputStreamReader(this.client.getInputStream()));
@@ -143,7 +143,7 @@ public class Server {
 				}
 				
 			}
-			this.sendMessageToClients("un client vient de se déconnecter");
+			this.sendMessageToClients("un utilisateur vient de se déconnecter");
 			System.out.println("\u001B[31m le client "+client.getInetAddress()+" vient de se déconnecter du serveur \u001B[37m");
 			clients.delete(client);
 			
